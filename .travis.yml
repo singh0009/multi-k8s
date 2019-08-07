@@ -15,7 +15,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-k8s-249002
   - gcloud config set compute/zone us-central1-a
-  - gcloud container cluster get-credentials multi-k8s
+  - gcloud container clusters get-credentials multi-k8s
   ## - gcloud container clusters get-credentials multi-k8s --zone us-central1-a --project multi-k8s-249002
   - docker login -u "$DOCKER_ID" --password  $DOCKER_PASSWORD
   - docker build -t singh0009/react-test -f ./client/Dockerfile.dev ./client
